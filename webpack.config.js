@@ -29,7 +29,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.(ts|tsx)$/,
-                loaders: ["react-hot", "ts-loader"]
+                loaders: ["react-hot", "babel", "ts-loader"]
             },
             {
                 test: /\.(eot.*|woff.*|woff2.*|ttf.*|svg.*|png.*|jpg.*|gif.*)/,

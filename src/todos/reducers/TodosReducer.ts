@@ -10,7 +10,7 @@ const INITIAL_STATE: Todo[] = [{
 export default function TodosReducer(state = INITIAL_STATE, action) {
     switch (action.type) {
         case types.ADD_TODO:
-            return [...state, action.todo];
+            return [...state, {id: state.length, text: action.todo.text}];
         case types.EDIT_TODO:
             return state.map(todo => todo.id === action.todo.id ? Object.assign({}, todo, {text: action.newText}) : todo);
         case types.DELETE_TODO:

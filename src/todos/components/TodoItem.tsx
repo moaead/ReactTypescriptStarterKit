@@ -11,8 +11,9 @@ class TodoItem extends React.Component<ITodoItem, void> {
     render() {
         return (
             <div>
-                <p>{this.props.todo.text} <input type="button" value="Delete"
-                                                 onClick={() => this.props.onDeleteClick(this.props.todo)}/></p>
+                <p>{this.props.todo.text}
+                    <input type="button" value="Delete"
+                           onClick={() => this.props.onDeleteClick(this.props.todo)}/></p>
             </div>
         );
     }

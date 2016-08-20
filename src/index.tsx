@@ -1,25 +1,25 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {createStore} from 'redux';
 import {Provider} from 'react-redux';
-import 'babel-polyfill';
-import rootReducer from "./todos/reducers/index";
-import {addTodo} from "./todos/actions";
+import TodosMainSection from "./todos/components/MainSection"
+import GithubUserMainSection from "./githubUser/components/MainSection"
+import rootSaga from './githubUser/sagas'
+import configureStore from "./store/configureStore";
 
-const store = createStore(rootReducer);
+const store = configureStore();
+store.runSaga(rootSaga);
 
-//Just to debug the state when dispatching events
-let unsubscribe = store.subscribe(() =>
-    console.log(store.getState())
-);
-store.dispatch(addTodo({id: 1, text: "Hey"}));
-unsubscribe();
 
-//TODO use in react
 ReactDOM.render(
     <div>
         <Provider store={ store }>
-            <div>Hello World1</div>
+            <div>
+                <h2>Todo List</h2>
+                <TodosMainSection />
+                <hr />
+                <h2>Github user grabber (async)</h2>
+                <GithubUserMainSection />
+            </div>
         </Provider>
     </div>,
     document.getElementById('app')
