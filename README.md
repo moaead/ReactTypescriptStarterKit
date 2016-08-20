@@ -6,10 +6,9 @@ a simple todo list app that uses react-redux in typescript.
 * React
 * Redux
 * Webpack
-* Babel Polyfill
+* Babel
 * Mocha
 * Chai
-
 
 ## To run the app
 
@@ -21,9 +20,5 @@ a simple todo list app that uses react-redux in typescript.
 ## To run the tests
 
 * run `npm test`
-
-## Why Babel Polyfill ?
-
-* mostly to use `Object.assign` but for full list go to [Babel Polyfill] (https://babeljs.io/docs/usage/polyfill/)
 
 
