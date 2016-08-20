@@ -16,6 +16,7 @@ a simple todo list app that uses react-redux in typescript.
 1. clone the repo and run `npm install`
 2. run `typings install`
 3. run `npm start` to start the app
+4. go to [localhost:3000](http://localhost:3000)
 
 ## To run the tests
 
